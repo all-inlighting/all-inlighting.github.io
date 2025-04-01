@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Affinity Lighting & Design – Your Professional Lighting Company</title>
+<meta name="description" content="Affinity Lighting & Design offers professional lighting solutions and design services in Aruba. Contact us today to transform your space." />
+<meta name="keywords" content="lighting, design, Aruba, professional lighting, Affinity Lighting, LED, home lighting, commercial lighting" />
+<meta name="author" content="Affinity Lighting & Design" />
+<link rel="canonical" href="https://all-inlighting.com/" />
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<!-- Open Graph (Facebook) -->
+<meta property="og:title" content="Affinity Lighting & Design" />
+<meta property="og:description" content="Professional lighting and design services in Aruba." />
+<meta property="og:image" content="https://all-inlighting.com/assets/images/hero.jpg" />
+<meta property="og:url" content="https://all-inlighting.com/" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Affinity Lighting & Design" />
+<meta name="twitter:description" content="Professional lighting and design services in Aruba." />
+<meta name="twitter:image" content="https://all-inlighting.com/assets/images/hero.jpg" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+<link rel="apple-touch-icon" href="assets/images/logo.png" />
+
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="contact-info">
+        <a href="tel:+2975869848"><i class="fas fa-phone-alt"></i><span>+297 586 9848</span></a>
+        <a href="mailto:info@all-inlighting.com"><i class="fas fa-envelope"></i><span>info@all-inlighting.com</span></a>
+        <span><i class="fas fa-clock"></i> Mon – Fri: 9:00 - 17:00</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="center-logo">
+    <img src="assets/images/logo.png" alt="Affinity Lighting & Design Logo">
+  </div>
+
+  <img src="assets/images/hero.jpg" alt="Affinity Lighting & Design Hero Image" class="full-width-image" />
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-wrapper">
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
+          <button type="submit">Send Message</button>
+          <div class="confirmation" id="confirmation-message">
+            Thank you for contacting us! We'll get back to you soon.
+          </div>
+        </form>
+
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.3187261001085!2d-70.03317442419005!3d12.544149287774822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e85386d498f74cf%3A0x8e9814daac5ccc0d!2sAffinity%20Lighting%20%26%20Design!5e0!3m2!1sen!2saw!4v1711993336206!5m2!1sen!2saw" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-columns">
+      <div class="footer-col">
+        <img src="assets/images/logo.png" alt="Affinity Lighting Logo" class="footer-logo">
+        <p>&copy; 2025 Affinity Lighting & Design</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> Tanki Flip 4A, Unit 2, Noord, Aruba</p>
+        <p><i class="fas fa-phone-alt"></i> +297 586 9848</p>
+        <p><i class="fas fa-envelope"></i> info@all-inlighting.com</p>
+        <p><i class="fas fa-clock"></i> Mon – Fri: 9:00 - 17:00</p>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <p>
+          <a href="https://www.facebook.com/affinitylighting" target="_blank" style="color: white; text-decoration: none;">
+            <i class="fab fa-facebook-square"></i> Facebook
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const confirmation = document.getElementById('confirmation-message');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch('https://formsubmit.co/ajax/info@all-inlighting.com', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          confirmation.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again later.');
+        }
+      })
+      .catch(error => {
+        alert('There was a problem submitting your form.');
+      });
+    });
+  </script>
+</body>
+</html>
