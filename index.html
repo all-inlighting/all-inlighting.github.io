@@ -56,6 +56,7 @@
       <h2>Contact Us</h2>
       <div class="contact-wrapper">
         <form id="contact-form">
+          <input type="text" name="_honey" style="display:none">
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
           <textarea name="message" rows="5" placeholder="How can we help you?" required></textarea>
@@ -107,12 +108,12 @@
   <script>
     const form = document.getElementById('contact-form');
     const confirmation = document.getElementById('confirmation-message');
-
+  
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       const formData = new FormData(form);
-
-      fetch('https://formsubmit.co/ajax/ewaldbrowne@gmail.com', {
+  
+      fetch('https://formsubmit.co/ajax/588d707145fa09f40501c06a5cdb41cf', {
         method: 'POST',
         body: formData,
         headers: {
